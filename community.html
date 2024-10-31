@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+  <title>Sportistic</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="community_style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        },
+        extend: {
+          colors: {
+            theme: "#0A061E",
+            background: "#1A1531",
+            button: "#FFD88D",
+            card: "#27223E",
+            light: "#DBD8E9",
+            outline: "#353147",
+            secondary: "#7E7997",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-theme text-light">
+  <main class="flex font-poppins h-screen">
+    <!-- Sidebar Start -->
+    <aside class="sidebar mx-5">
+      <div class="logo flex m-5 justify-center items-center font-bold text-xl cursor-pointer">
+        <div class="logo-wrap w-28 mx-1">
+          <img src="assets/logo.png" alt="" />
+        </div>
+      </div>
+      <div class="general-tab">
+        <p class="uppercase font-semibold text-xs">General</p>
+        <nav>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/overview-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Overview</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/people-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Community</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/manageTask-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Matchmaking</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/rewards-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Rewards</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/aiCustom-icon.png" alt="" />
+            </div>
+            <span class="text-sm">AI Customs</span>
+          </div>
+        </nav>
+      </div>
+      <hr class="my-7 border-outline" />
+      <div class="other-tab">
+        <p class="uppercase font-semibold text-xs">Others</p>
+        <nav>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/settings-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Settings</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/help-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Help Center</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/logout-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Logout</span>
+          </div>
+        </nav>
+      </div>
+    </aside>
+    <!-- Sidebar End -->
+
+    <!-- Main Content Start -->
+    <div class="content bg-background rounded-l-[60px] flex-grow ml-6">
+      <!-- Top Bar Start -->
+      <div class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between">
+        <div
+          class="search-tab flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
+          <p class="text-sm text-secondary pr-5">Search by report name...</p>
+          <div class="icon-wrap size-5 cursor-pointer mx-3">
+            <img src="assets/icons/search-icon.png" alt="" />
+          </div>
+        </div>
+        <div class="profil-tab flex justify-center items-center">
+          <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+            <div class="icon size-5 cursor-pointer">
+              <img src="assets/icons/notif-icon.png" alt="" />
+            </div>
+          </div>
+          <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+            <div class="icon size-5 cursor-pointer">
+              <img src="assets/icons/message-icon.png" alt="" />
+            </div>
+          </div>
+          <div class="mx-4 h-8 w-px bg-outline"></div>
+          <div class="profil flex items-center justify-center">
+            <div class="greeting text-end">
+              <p class="text-secondary text-xs">Howdy,</p>
+              <p class="text-light font-bold text-sm">Janeeee</p>
+            </div>
+            <div class="img-wrap size-8 mx-3 cursor-pointer">
+              <img src="assets/profil-picture.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Bar End -->
+
+      <!-- Heading Start -->
+      <div class="heading flex flex-nowrap justify-between">
+        <div class="mx-[6.5rem]">
+          <h1 class="text-light font-extrabold text-xl">Community</h1>
+          <p class="text-secondary text-xs">
+            Find new Friends and Roll out!
+          </p>
+        </div>
+        <div class="button-wrap mx-[6.5rem] flex flex-wrap mb-8">
+          <div
+            class="button text-center font-semibold rounded-full border-light py-2 w-48 cursor-pointer mx-1 text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]">
+            Create Community
+          </div>
+        </div>
+      </div>
+      <!-- Heading End -->
+
+      <!-- Card Start -->
+      <div class="card-container flex flex-wrap justify-start max-w-5xl mx-auto">
+        <div class="bg-[#27223E] rounded-3xl overflow-hidden my-5 mx-auto w-[30%] flex flex-col relative">
+          <div class="relative h-52 bg-cover bg-no-repeat" style="background-image: url('./assets/community_pic.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80"></div>
+            <h2
+              class="absolute bottom-2 left-1/3 transform -translate-x-1/2 text-white font-bold text-lg text-shadow-md z-10">
+              Nama Komunitas 1
+            </h2>
+          </div>
+
+          <div class="p-4 text-white">
+            <p>Informasi komunitas</p>
+            <div class="flex justify-between items-center mt-2">
+              <button class="bg-[#FFD88D] text-[#0A061E] rounded-full py-1 px-4">
+                Masuk
+              </button>
+              <div class="text-sm text-[#7E7997] text-right">
+                <p>Anggota: 10/20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#27223E] rounded-3xl overflow-hidden my-5 mx-auto w-[30%] flex flex-col relative">
+          <div class="relative h-52 bg-cover bg-no-repeat" style="background-image: url('./assets/community_pic.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80"></div>
+            <h2
+              class="absolute bottom-2 left-1/3 transform -translate-x-1/2 text-white font-bold text-lg text-shadow-md z-10">
+              Nama Komunitas 2
+            </h2>
+          </div>
+
+          <div class="p-4 text-white">
+            <p>Informasi komunitas</p>
+            <div class="flex justify-between items-center mt-2">
+              <button class="bg-[#FFD88D] text-[#0A061E] rounded-full py-1 px-4">
+                Masuk
+              </button>
+              <div class="text-sm text-[#7E7997] text-right">
+                <p>Anggota: 10/20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#27223E] rounded-3xl overflow-hidden my-5 mx-auto w-[30%] flex flex-col relative">
+          <div class="relative h-52 bg-cover bg-no-repeat" style="background-image: url('./assets/community_pic.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80"></div>
+            <h2
+              class="absolute bottom-2 left-1/3 transform -translate-x-1/2 text-white font-bold text-lg text-shadow-md z-10">
+              Nama Komunitas 3
+            </h2>
+          </div>
+
+          <div class="p-4 text-white">
+            <p>Informasi komunitas</p>
+            <div class="flex justify-between items-center mt-2">
+              <button class="bg-[#FFD88D] text-[#0A061E] rounded-full py-1 px-4">
+                Masuk
+              </button>
+              <div class="text-sm text-[#7E7997] text-right">
+                <p>Anggota: 10/20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+        <!-- Main Content End -->
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <title>Sportistic</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+                },
+                extend: {
+                    colors: {
+                        theme: "#0A061E",
+                        background: "#1A1531",
+                        button: "#FFD88D",
+                        card: "#27223E",
+                        light: "#DBD8E9",
+                        outline: "#353147",
+                        secondary: "#7E7997",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-theme text-light">
+    <main class="flex font-poppins h-screen">
+        <!-- Sidebar Start -->
+        <aside class="sidebar mx-5">
+            <div class="logo flex m-5 justify-center items-center font-bold text-xl cursor-pointer">
+                <div class="logo-wrap w-28 mx-1">
+                    <img src="assets/logo.png" alt="" />
+                </div>
+            </div>
+            <div class="general-tab">
+                <p class="uppercase font-semibold text-xs">General</p>
+                <nav>
+                    <div
+                        class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/overview-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Overview</span>
+                    </div>
+                    <div
+                        class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/people-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Community</span>
+                    </div>
+                    <div
+                        class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/manageTask-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Matchmaking</span>
+                    </div>
+                    <div
+                        class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/rewards-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Rewards</span>
+                    </div>
+                    <div
+                        class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/aiCustom-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Sewa Lapangan</span>
+                    </div>
+                </nav>
+            </div>
+            <hr class="my-7 border-outline" />
+            <div class="other-tab">
+                <p class="uppercase font-semibold text-xs">Others</p>
+                <nav>
+                    <div
+                        class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/settings-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Settings</span>
+                    </div>
+                    <div
+                        class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/help-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Help Center</span>
+                    </div>
+                    <div
+                        class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+                        <div class="icon-wrap size-5 mr-3">
+                            <img src="assets/icons/logout-icon.png" alt="" />
+                        </div>
+                        <span class="text-sm">Logout</span>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <!-- Sidebar End -->
+
+        <!-- Main Content Start -->
+        <div class="content bg-background rounded-l-[60px] flex-grow ml-6">
+            <!-- Top Bar Start -->
+            <div class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between">
+                <div
+                    class="search-tab flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
+                    <p class="text-sm text-secondary pr-5">Search by report name...</p>
+                    <div class="icon-wrap size-5 cursor-pointer mx-3">
+                        <img src="assets/icons/search-icon.png" alt="" />
+                    </div>
+                </div>
+                <div class="profil-tab flex justify-center items-center">
+                    <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+                        <div class="icon size-5 cursor-pointer">
+                            <img src="assets/icons/notif-icon.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+                        <div class="icon size-5 cursor-pointer">
+                            <img src="assets/icons/message-icon.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="mx-4 h-8 w-px bg-outline"></div>
+                    <div class="profil flex items-center justify-center">
+                        <div class="greeting text-end">
+                            <p class="text-secondary text-xs">Howdy,</p>
+                            <p class="text-light font-bold text-sm">Janeeee</p>
+                        </div>
+                        <div class="img-wrap size-8 mx-3 cursor-pointer">
+                            <img src="assets/profil-picture.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- bar search start -->
+            <div
+                class="search-container bg-card p-4 rounded-lg shadow-md w-4/5 mx-auto mt-7 flex justify-between items-center">
+                <div class="heading mx-[5rem]">
+                    <h1 class="text-light font-extrabold text-xl">Mau Main Dimana?</h1>
+                    <p class="text-secondary text-xs">
+                        Cari Lapangan yang Loe Suka!!
+                    </p>
+                </div>
+                <div class="search-bar flex items-center">
+                    <input type="text" placeholder="Cari..." class="border rounded-full py-2 px-4 text-sm" />
+                    <button class="mr-6 ml-2 bg-button text-theme rounded-full py-2 px-4">Cari</button>
+                </div>
+            </div>
+            <!-- bar search end -->
+
+            <!-- catalogs start -->
+            <div class="container mx-auto p-5">
+                <div class="flex flex-wrap justify-center">
+                    <div class="flex justify-center space-x-4 max-w-7xl mx-auto mt-8">
+                        <!-- Card 1 -->
+                        <div class="relative bg-[#31294D] rounded-2xl overflow-hidden shadow-lg w-80">
+                            <!-- Background Image -->
+                            <img src="./assets/unsplash_70YxSTWa2Zw.png" alt="Soccer Stadium"
+                                class="w-full h-52 object-cover">
+
+                            <!-- Overlay and Text -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-4 flex items-center space-x-2 bg-gradient-to-r from-[#31294D]/90 to-transparent">
+                                <!-- Logo/Icon -->
+                                <img src="./assets/imilkom 1.png" alt="Soccer Logo" class="w-10 h-10 rounded-full">
+
+                                <!-- Text Section -->
+                                <div>
+                                    <h2 class="text-white font-semibold text-lg">Sanobar Mini Soccer</h2>
+                                    <div class="flex items-center text-yellow-400 text-sm space-x-1">
+                                        <span>&#9733; 4.5</span>
+                                        <span class="text-gray-300">(200 Ulasan)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="relative bg-[#31294D] rounded-2xl overflow-hidden shadow-lg w-80">
+                            <!-- Background Image -->
+                            <img src="./assets/unsplash_70YxSTWa2Zw.png" alt="Soccer Stadium"
+                                class="w-full h-52 object-cover">
+
+                            <!-- Overlay and Text -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-4 flex items-center space-x-2 bg-gradient-to-r from-[#31294D]/90 to-transparent">
+                                <!-- Logo/Icon -->
+                                <img src="./assets/imilkom 1.png" alt="Soccer Logo" class="w-10 h-10 rounded-full">
+
+                                <!-- Text Section -->
+                                <div>
+                                    <h2 class="text-white font-semibold text-lg">Olympic Stadium</h2>
+                                    <div class="flex items-center text-yellow-400 text-sm space-x-1">
+                                        <span>&#9733; 4.7</span>
+                                        <span class="text-gray-300">(150 Ulasan)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="relative bg-[#31294D] rounded-2xl overflow-hidden shadow-lg w-80">
+                            <!-- Background Image -->
+                            <img src="./assets/unsplash_70YxSTWa2Zw.png" alt="Soccer Stadium"
+                                class="w-full h-52 object-cover">
+
+                            <!-- Overlay and Text -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-4 flex items-center space-x-2 bg-gradient-to-r from-[#31294D]/90 to-transparent">
+                                <!-- Logo/Icon -->
+                                <img src="./assets/imilkom 1.png" alt="Soccer Logo" class="w-10 h-10 rounded-full">
+
+                                <!-- Text Section -->
+                                <div>
+                                    <h2 class="text-white font-semibold text-lg">Arena Stadium</h2>
+                                    <div class="flex items-center text-yellow-400 text-sm space-x-1">
+                                        <span>&#9733; 4.8</span>
+                                        <span class="text-gray-300">(300 Ulasan)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content End -->
+    </main>
+</body>
+
+</html>
