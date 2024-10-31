@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <title>Sportistic</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              theme: "#0A061E",
+              background: "#1A1531",
+              button: "#FFD88D",
+              card: "#27223E",
+              light: "#DBD8E9",
+              outline: "#353147",
+              secondary: "#7E7997",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-theme text-light">
+    <main class="flex font-poppins h-screen">
+      <!-- Sidebar Start -->
+      <aside class="sidebar mx-5">
+        <div
+          class="logo flex m-5 justify-center items-center font-bold text-xl cursor-pointer"
+        >
+          <div class="logo-wrap w-28 mx-1">
+            <img src="assets/logo.png" alt="" />
+          </div>
+        </div>
+        <div class="general-tab">
+          <p class="uppercase font-semibold text-xs">General</p>
+          <nav>
+            <div
+              class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/overview-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Overview</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/people-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Community</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/manageTask-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Matchmaking</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/rewards-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Rewards</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/aiCustom-icon.png" alt="" />
+              </div>
+              <span class="text-sm">AI Customs</span>
+            </div>
+          </nav>
+        </div>
+        <hr class="my-7 border-outline" />
+        <div class="other-tab">
+          <p class="uppercase font-semibold text-xs">Others</p>
+          <nav>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/settings-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Settings</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/help-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Help Center</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/logout-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Logout</span>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <!-- Sidebar End -->
+
+      <!-- Main Content Start -->
+      <div class="content bg-background rounded-l-[60px] flex-grow ml-6">
+        <!-- Top Bar Start -->
+        <div
+          class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between"
+        >
+          <div
+            class="search-tab flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3"
+          >
+            <p class="text-sm text-secondary pr-5">Search by report name...</p>
+            <div class="icon-wrap size-5 cursor-pointer mx-3">
+              <img src="assets/icons/search-icon.png" alt="" />
+            </div>
+          </div>
+          <div class="profil-tab flex justify-center items-center">
+            <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+              <div class="icon size-5 cursor-pointer">
+                <img src="assets/icons/notif-icon.png" alt="" />
+              </div>
+            </div>
+            <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+              <div class="icon size-5 cursor-pointer">
+                <img src="assets/icons/message-icon.png" alt="" />
+              </div>
+            </div>
+            <div class="mx-4 h-8 w-px bg-outline"></div>
+            <div class="profil flex items-center justify-center">
+              <div class="greeting text-end">
+                <p class="text-secondary text-xs">Howdy,</p>
+                <p class="text-light font-bold text-sm">Janeeee</p>
+              </div>
+              <div class="img-wrap size-8 mx-3 cursor-pointer">
+                <img src="assets/profil-picture.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Heading Start -->
+        <div class="heading mx-[6.5rem] mb-6">
+          <h1 class="text-light font-extrabold text-xl">Overview</h1>
+          <p class="text-secondary text-xs">Your performance summary</p>
+        </div>
+        <!-- Heading End -->
+
+        <!-- Overview Section Start -->
+        <div class="grid grid-cols-2 md:grid-cols-2 gap-4 mb-6 justify-center items-center mx-auto w-3/5">
+          <div class="bg-card p-2 rounded-md shadow text-center">
+            <h2 class="text-secondary text-sm">Matches Played</h2>
+            <p class="text-2xl font-bold">15</p>
+            <p class="text-secondary text-xs">Total matches this month</p>
+          </div>
+          <div class="bg-card p-2 rounded-md shadow text-center">
+            <h2 class="text-secondary text-sm">Goals Achieved</h2>
+            <p class="text-2xl font-bold">10/12</p>
+            <p class="text-secondary text-xs">Completed goals</p>
+          </div>
+          <div class="bg-card p-2 rounded-md shadow text-center">
+            <h2 class="text-secondary text-sm">Community Activity</h2>
+            <p class="text-2xl font-bold">5 Posts</p>
+            <p class="text-secondary text-xs">Your recent contributions</p>
+          </div>
+          <div class="bg-card p-2 rounded-md shadow text-center">
+            <h2 class="text-secondary text-sm">Calories Burned</h2>
+            <p class="text-2xl font-bold">1200 kcal</p>
+            <p class="text-secondary text-xs">Calories burned this week</p>
+          </div>
+        </div>
+        
+
+<!-- Your Progress Section -->
+<h2 class="text-xl font-bold mb-3 text-center">Your Progress</h2>
+<div class="mb-3 max-w-sm mx-auto">
+  <p class="mb-1 text-sm text-center">Weekly Exercise</p>
+  <div class="bg-outline rounded-full h-3 mb-2">
+    <div class="bg-light h-3 rounded-full" style="width: 75%"></div>
+  </div>
+  <p class="text-sm text-center">75%</p>
+</div>
+<div class="mb-4 max-w-sm mx-auto">
+  <p class="mb-1 text-sm text-center">Calories Target</p>
+  <div class="bg-outline rounded-full h-3 mb-2">
+    <div class="bg-light h-3 rounded-full" style="width: 60%"></div>
+  </div>
+  <p class="text-sm text-center">60%</p>
+</div>
+
+
+<!-- Community Highlights Section -->
+<h2 class="text-xl font-bold mb-2 text-center mt-16">Community Highlights</h2>
+<div class="bg-card p-3 rounded-lg shadow mb-9 text-center w-4/5 mx-auto">
+  <p class="text-secondary text-sm">No new posts in the community.</p>
+</div>
+
+
+<!-- Quick Actions Section -->
+<h2 class="text-xl font-bold mt-16 mb-4 text-center">Quick Actions</h2>
+<div class="flex justify-center space-x-3">
+  <button class="bg-button text-theme px-3 py-1.5 rounded-lg text-sm">
+    Start New Match
+  </button>
+  <button class="bg-button text-theme px-3 py-1.5 rounded-lg text-sm">
+    Check Rewards
+  </button>
+</div>
+
+      <!-- Overview Section End -->
+    </main>
+  </body>
+</html>
