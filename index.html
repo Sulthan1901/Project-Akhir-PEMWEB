@@ -32,9 +32,9 @@
     </script>
   </head>
   <body class="bg-theme text-light">
-    <main class="flex font-poppins h-screen">
+    <main class="flex flex-col md:flex-row font-poppins h-screen">
       <!-- Left Form Section -->
-      <div class="w-1/2 flex items-center justify-center" style="min-height: 100vh;">
+      <div class="w-full md:w-1/2 flex items-center justify-center" style="min-height: 100vh;">
         <div class="w-3/4">
           <div class="logo-wrap text-center mb-8">
             <img
@@ -44,7 +44,7 @@
               width="200"
               height="50"
             />
-            <h2 class="button text-4xl  font-bold ">Selamat Datang lek..</h2>
+            <h2 class="button text-4xl  font-bold ">WELCOME BACK</h2>
             <p class="">Welcome back! Please enter your details.</p>
           </div>
           <form>
@@ -97,8 +97,8 @@
           </form>
         </div>
       </div>
-      <!-- Rigt Image Section -->
-      <div class="w-1/2 relative bg-theme flex justify-end">
+      <!-- Right Image Section, hidden on small screens -->
+      <div class="hidden md:flex w-1/2 relative bg-theme justify-end">
         <img
           src="assets/Right Side.png"
           alt="Illustration of a person in sports attire jumping with a dynamic background"
