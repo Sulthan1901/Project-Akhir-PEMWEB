@@ -33,6 +33,62 @@
 };
 
     </script>
+
+    <style>
+      /* Breakpoint untuk smartphone (layar maksimal 640px) */
+@media (max-width: 640px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Menyembunyikan sidebar dan membuat menu dapat diakses melalui toggle */
+  .sidebar {
+    display: none;
+  }
+
+  /* Mengubah ukuran dan padding untuk elemen utama */
+  .content {
+    margin: 0;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  /* Menyesuaikan ukuran top bar agar lebih pas */
+  .top-bar {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .top-bar .search-tab,
+  .top-bar .profil-tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Menyusun ulang grid pada overview section menjadi satu kolom */
+  .grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  /* Menyesuaikan ukuran elemen pada bagian Progress dan Community Highlights */
+  .heading,
+  .max-w-sm,
+  .bg-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Menyesuaikan tombol Quick Actions */
+  .flex.justify-center.space-x-3 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+    </style>
   </head>
   <body class="bg-theme text-light">
     <main class="flex font-poppins">
