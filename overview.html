@@ -11,25 +11,27 @@
     />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="tailwind.config.js"></script> -->
     <script>
       tailwind.config = {
-        theme: {
-          fontFamily: {
-            poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
-          },
-          extend: {
-            colors: {
-              theme: "#0A061E",
-              background: "#1A1531",
-              button: "#FFD88D",
-              card: "#27223E",
-              light: "#DBD8E9",
-              outline: "#353147",
-              secondary: "#7E7997",
-            },
-          },
-        },
-      };
+  theme: {
+    fontFamily: {
+      poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+    },
+    extend: {
+      colors: {
+        theme: "#0A061E",
+        background: "#1A1531",
+        button: "#FFD88D",
+        card: "#27223E",
+        light: "#DBD8E9",
+        outline: "#353147",
+        secondary: "#7E7997",
+      },
+    },
+  },
+};
+
     </script>
   </head>
   <body class="bg-theme text-light">
@@ -56,35 +58,39 @@
             </div>
             <div
               class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="komunitas()"
             >
               <div class="icon-wrap size-5 mr-3">
                 <img src="assets/icons/people-icon.png" alt="" />
               </div>
-              <span class="text-sm" onclick="komunitas()">Community</span>
+              <span class="text-sm">Community</span>
             </div>
             <div
               class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="main()"
             >
               <div class="icon-wrap size-5 mr-3">
                 <img src="assets/icons/manageTask-icon.png" alt="" />
               </div>
-              <span class="text-sm" onclick="main()">Matchmaking</span>
+              <span class="text-sm" >Matchmaking</span>
             </div>
             <div
               class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="kupon()"
             >
               <div class="icon-wrap size-5 mr-3">
                 <img src="assets/icons/rewards-icon.png" alt="" />
               </div>
-              <span class="text-sm" onclick="kupon()">Rewards</span>
+              <span class="text-sm" >Rewards</span>
             </div>
             <div
               class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="sewa()"
             >
               <div class="icon-wrap size-5 mr-3">
                 <img src="assets/icons/aiCustom-icon.png" alt="" />
               </div>
-              <span class="text-sm" onclick="sewa()">Sewa Lapangan</span>
+              <span class="text-sm" >Sewa Lapangan</span>
             </div>
           </nav>
         </div>
@@ -94,27 +100,30 @@
           <nav>
             <div
               class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="profil()"
             >
               <div class="icon-wrap size-5 mr-3">
                 <img src="assets/icons/settings-icon.png" alt="" />
               </div>
-              <span class="text-sm" onclick="profil()">Profile</span>
+              <span class="text-sm" >Profile</span>
             </div>
             <div
               class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="tolong()"
             >
               <div class="icon-wrap size-5 mr-3">
                 <img src="assets/icons/help-icon.png" alt="" />
               </div>
-              <span class="text-sm" onclick="tolong()">Help Center</span>
+              <span class="text-sm" >Help Center</span>
             </div>
             <div
               class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="keluar()"
             >
               <div class="icon-wrap size-5 mr-3">
                 <img src="assets/icons/logout-icon.png" alt="" />
               </div>
-              <span class="text-sm" onclick="keluar()">Logout</span>
+              <span class="text-sm" >Logout</span>
             </div>
           </nav>
         </div>
@@ -122,7 +131,7 @@
       <!-- Sidebar End -->
 
       <!-- Main Content Start -->
-      <div class="content bg-background rounded-l-[60px] flex-grow ml-6">
+      <div class="content bg-background rounded-l-[60px] flex-grow ml-6 h-screen overflow-scroll overflow-x-hidden">
         <!-- Top Bar Start -->
         <div
           class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between"
