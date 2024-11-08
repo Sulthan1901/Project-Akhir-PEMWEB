@@ -118,13 +118,9 @@
     <div class="content bg-background rounded-l-[60px] flex-grow ml-6">
       <!-- Top Bar Start -->
       <div class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between">
-        <div
-          class="search-tab flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
-          <p class="text-sm text-secondary pr-5">Cari...</p>
-          <div class="icon-wrap size-5 cursor-pointer mx-3">
-            <img src="assets/icons/search-icon.png" alt="" />
-          </div>
-        </div>
+
+          <input type="text" class="search-tab flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3 bg-card" placeholder="Cari...">
+
         <div class="profil-tab flex justify-center items-center">
           <div class="menu-icon rounded-full border border-outline p-2 mx-1">
             <div class="icon size-5 cursor-pointer">
@@ -157,12 +153,6 @@
           <p class="text-secondary text-xs">
             Cari teman dan bergabung dengan komunitas yang sesuai dengan minatmu!! 
           </p>
-        </div>
-        <div class="button-wrap mx-[6.5rem] flex flex-wrap mb-8">
-          <div
-            class="button text-center font-semibold rounded-full border-light py-2 w-48 cursor-pointer mx-1 text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]" onclick="AddCommunity()">
-            Buat Komunitas
-          </div>
         </div>
       </div>
       <!-- Heading End -->
@@ -234,6 +224,12 @@
           </div>
         </div>
         <!-- Card End -->
+        <div class="button-wrap mb-8 absolute bottom-5 right-36">
+          <div
+            class="button text-center text-5xl font-extralight rounded-full border-light w-16 h-16 cursor-pointer flex justify-center items-center mx-1 bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] hover:bg-gradient-to-b hover:from-[#6F4FFF] hover:to-[#6F4FFF]" onclick="AddCommunity()">
+            +
+          </div>
+        </div>
         <!-- Main Content End -->
   </main>
 
