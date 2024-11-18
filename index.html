@@ -34,7 +34,10 @@
   <body class="bg-theme text-light">
     <main class="flex flex-col md:flex-row font-poppins h-screen">
       <!-- Left Form Section -->
-      <div class="w-full md:w-1/2 flex items-center justify-center" style="min-height: 100vh;">
+      <div
+        class="w-full md:w-1/2 flex items-center justify-center"
+        style="min-height: 100vh"
+      >
         <div class="w-3/4">
           <div class="logo-wrap text-center mb-8">
             <img
@@ -44,7 +47,7 @@
               width="200"
               height="50"
             />
-            <h2 class="button text-4xl  font-bold ">Selamat Datang</h2>
+            <h2 class="button text-4xl font-bold">Selamat Datang</h2>
             <p class="">Selamat Datang! Masuk dulu!!</p>
           </div>
           <form>
@@ -74,7 +77,8 @@
             <div class="mb-4">
               <button
                 type="button"
-                class="w-full py-2 bg-button text-gray-900 font-bold rounded-lg hover:bg-yellow-600" onclick="login()"
+                class="w-full py-2 bg-button text-gray-900 font-bold rounded-lg hover:bg-yellow-600"
+                onclick="login()"
               >
                 Masuk
               </button>
@@ -84,7 +88,11 @@
                 type="button"
                 class="w-full py-2 bg-theme font-bold rounded-lg flex items-center border justify-center hover:bg-yellow-600"
               >
-                <img src="assets/icons/google.png" alt="Google Logo" class="w-5 h-5 mr-2" />
+                <img
+                  src="assets/icons/google.png"
+                  alt="Google Logo"
+                  class="w-5 h-5 mr-2"
+                />
                 Masuk Lewat Google
               </button>
             </div>
@@ -107,11 +115,9 @@
       </div>
     </main>
     <script>
-
-      function login(){
-        window.location.href="overview.html"
+      function login() {
+        window.location.href = "overview.html";
       }
-
     </script>
   </body>
 </html>
