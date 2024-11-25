@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+  <title>Sportistic</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        },
+        extend: {
+          colors: {
+            theme: "#0A061E",
+            background: "#1A1531",
+            button: "#FFD88D",
+            card: "#27223E",
+            light: "#DBD8E9",
+            outline: "#353147",
+            secondary: "#7E7997",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-theme text-light">
+  <main class="flex flex-col md:flex-row font-poppins h-screen">
+    <!-- Left Form Section -->
+    <div class="w-full md:w-1/2 flex items-center justify-center" style="min-height: 100vh">
+      <div class="w-3/4">
+        <div class="logo-wrap text-center mb-8">
+          <img src="assets/logo.png" alt="Sportistic Logo" class="mx-auto mb-4" width="200" height="50" />
+          <h2 class="button text-4xl font-bold">Selamat Datang</h2>
+          <p class="">Selamat Datang! Masuk dulu!!</p>
+        </div>
+        <form>
+          <div class="mb-4">
+            <label for="email" class="block mb-2">Email</label>
+            <input type="email" id="email" placeholder="Masukin Email kamu"
+              class="w-full px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block mb-2">Sandi</label>
+            <input type="password" id="password" placeholder=""
+              class="w-full px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
+          </div>
+          <div class="flex items-center mb-4">
+            <input type="checkbox" id="remember-me" class="mr-2" />
+            <label for="remember-me" class="text-light">Ingat Saya</label>
+            <a href="#" class="ml-auto text-secondary">Lupa Sandi?</a>
+          </div>
+          <div class="mb-4">
+            <button type="button" class="w-full py-2 bg-button text-gray-900 font-bold rounded-lg hover:bg-yellow-600"
+              onclick="login()">
+              Masuk
+            </button>
+          </div>
+          <div class="mb-4">
+            <button type="button"
+              class="w-full py-2 bg-theme font-bold rounded-lg flex items-center border justify-center hover:bg-yellow-600">
+              <img src="assets/icons/google.png" alt="Google Logo" class="w-5 h-5 mr-2" />
+              Masuk Lewat Google
+            </button>
+          </div>
+          <div class="text-center">
+            <p class="text-secondary">
+              Sudah Punya akun?
+              <a href="#" class="text-light">Daftar Gratis!</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Right Image Section, hidden on small screens -->
+    <div class="hidden md:flex w-1/2 relative bg-theme justify-end">
+      <img src="assets/Right Side.png" alt="Illustration of a person in sports attire jumping with a dynamic background"
+        class="h-full object-cover" />
+    </div>
+  </main>
+  <script>
+    function login() {
+      window.location.href = "overview.html";
+    }
+  </script>
+</body>
+
+</html>
