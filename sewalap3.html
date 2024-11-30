@@ -260,8 +260,9 @@
                       </div>
                       <!-- Submit Button -->
                       <div class="mt-6">
-                        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">
-                          Pesan sekarang <!--kasih allert aja-->
+                        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded"
+                            onclick="berhasil()">
+                          Pesan sekarang 
                         </button>
                       </div>
                     </form>
@@ -273,6 +274,10 @@
     </main>
 
     <script>
+
+        function berhasil() {
+            window.location.href = "sewaberhasil.html"
+        }
 
         function overview() {
             window.location.href = "overview.html"
