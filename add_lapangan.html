@@ -46,35 +46,40 @@
         <p class="uppercase font-semibold text-xs">Umum</p>
         <nav>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="overview()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/overview-icon.png" alt="" />
             </div>
             <span class="text-sm">Ringkasan</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="komunitas()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/people-icon.png" alt="" />
             </div>
             <span class="text-sm">Komunitas</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="main()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/manageTask-icon.png" alt="" />
             </div>
             <span class="text-sm">Tanding</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="kupon()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/rewards-icon.png" alt="" />
             </div>
             <span class="text-sm">Kupon</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
+            onclick="sewa()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/aiCustom-icon.png" alt="" />
             </div>
@@ -87,14 +92,16 @@
         <p class="uppercase font-semibold text-xs">Lainnya</p>
         <nav>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="profil()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/settings-icon.png" alt="" />
             </div>
             <span class="text-sm">Profil</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="keluar()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/logout-icon.png" alt="" />
             </div>
@@ -108,27 +115,38 @@
     <!-- Main Content Start -->
     <div class="content bg-background rounded-l-[60px] flex-grow ml-6 overflow-auto">
       <!-- Top Bar Start -->
+     
       <!-- Top Bar End -->
       <!-- Heading Start -->
       <div class="heading mx-[6.5rem] mt-12">
-        <h1 class="text-light font-extrabold text-xl">Buat Komunitas</h1>
+        <h1 class="text-light font-extrabold text-xl">Buat Lapangan</h1>
+        <p class="text-secondary text-xs">
+          Masukkan Lapangan Anda!!
+        </p>
       </div>
       <!-- Heading End -->
       <form action="">
         <div class="flex flex-col">
           <!-- input community name start  -->
-          <input type="text" id="community-name" placeholder="Nama Komunitas"
+          <input type="text" id="name" placeholder="Nama lapangan"
             class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
           <!-- input community name end -->
 
           <!-- input address start  -->
-          <input type="text" id="Deskripsi" placeholder="Alamat"
+          <input type="text" id="type" placeholder="Jenis"
             class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
           <!-- input address end -->
 
           <!-- input motivation start  -->
-          <textarea type="text" id="motivation" placeholder="Jumlah Anggota"
-            class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"></textarea>
+          <input type="text" id="location" placeholder="Lokasi" rows="10"
+            class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"></input>
+          <input type="text" id="facilities" placeholder="Fasilitas" rows="10"
+            class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"></input>
+          <input type="text" id="price_per_hour" placeholder="Harga per Jam" rows="10"
+            class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"></input>
+          <input type="text" id="avaible" placeholder="avaible" rows="10"
+            class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"></input>
+
           <!-- input motivation end -->
 
           <!-- tombol save start -->
@@ -151,16 +169,17 @@
       </form>
     </div>
   </main>
+
   <script>
     function Simpan() {
-      window.location.href = "community.html";
+      window.location.href = "sewa_lapangan.html";
     }
     function back() {
-      window.location.href = "community.html";
+      window.location.href = "sewa_lapangan.html";
     }
   </script>
 
-  <script src="script/addKomunitas.js"></script>
+  <script src="script/addLapangan.js"></script>
 
   <script src="script/username.js"></script>
 </body>

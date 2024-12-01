@@ -2,281 +2,265 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
-    <title>Sportistic</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+  <title>Sportistic</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
-                },
-                extend: {
-                    colors: {
-                        theme: "#0A061E",
-                        background: "#1A1531",
-                        button: "#FFD88D",
-                        card: "#27223E",
-                        light: "#DBD8E9",
-                        outline: "#353147",
-                        secondary: "#7E7997",
-                    },
-                },
-            },
-        };
-    </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        },
+        extend: {
+          colors: {
+            theme: "#0A061E",
+            background: "#1A1531",
+            button: "#FFD88D",
+            card: "#27223E",
+            light: "#DBD8E9",
+            outline: "#353147",
+            secondary: "#7E7997",
+          },
+        },
+      },
+    };
+  </script>
 </head>
 
 <body class="bg-theme text-light">
-    <main class="flex font-poppins h-screen">
-        <!-- Sidebar Start -->
-        <aside class="sidebar mx-5">
-            <div class="logo flex mt-5 justify-center items-center font-bold text-xl cursor-pointer">
-                <div class="logo-wrap w-52 mx-1">
-                    <a href="overview.html"><img src="assets/logo.png" alt="" /></a>
-                </div>
+  <main class="flex font-poppins h-screen">
+    <!-- Sidebar Start -->
+    <aside class="sidebar mx-5">
+      <div class="logo flex mt-5 justify-center items-center font-bold text-xl cursor-pointer">
+        <div class="logo-wrap w-52 mx-1">
+          <a href="overview.html"><img src="assets/logo.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="general-tab">
+        <p class="uppercase font-semibold text-xs">Umum</p>
+        <nav>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="overview()">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/overview-icon.png" alt="" />
             </div>
-            <div class="general-tab">
-                <p class="uppercase font-semibold text-xs">Umum</p>
-                <nav>
-                    <div class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-                        onclick="overview()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/overview-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Ringkasan</span>
-                    </div>
-                    <div class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-                        onclick="komunitas()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/people-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Komunitas</span>
-                    </div>
-                    <div class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-                        onclick="main()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/manageTask-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Tanding</span>
-                    </div>
-                    <div class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-                        onclick="kupon()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/rewards-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Kupon</span>
-                    </div>
-                    <div class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
-                        onclick="sewa()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/aiCustom-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Sewa Lapangan</span>
-                    </div>
-                </nav>
+            <span class="text-sm">Ringkasan</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="komunitas()">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/people-icon.png" alt="" />
             </div>
-            <hr class="my-7 border-outline" />
-            <div class="other-tab">
-                <p class="uppercase font-semibold text-xs">Lainnya</p>
-                <nav>
-                    <div class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-                        onclick="profil()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/settings-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Profil</span>
-                    </div>
-                    <div class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-                        onclick="tolong()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/help-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Bantuan</span>
-                    </div>
-                    <div class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-                        onclick="keluar()">
-                        <div class="icon-wrap size-5 mr-3">
-                            <img src="assets/icons/logout-icon.png" alt="" />
-                        </div>
-                        <span class="text-sm">Keluar</span>
-                    </div>
-                </nav>
+            <span class="text-sm">Komunitas</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="main()">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/manageTask-icon.png" alt="" />
             </div>
-        </aside>
-        <!-- Sidebar End -->
-
-        <!-- Main Content Start -->
-        <div class="content bg-background rounded-l-[60px] flex-grow ml-6 overflow-auto">
-            <!-- Top Bar Start -->
-            <div class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between">
-                <div
-                    class="flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
-                    <input type="text" placeholder="Cari..."
-                        class="text-sm text-secondary bg-transparent focus:outline-none w-full" />
-                    <div class="icon-wrap size-5 cursor-pointer mx-3">
-                        <img src="assets/icons/search-icon.png" alt="Search Icon" />
-                    </div>
-                </div>
-                <div class="profil-tab flex justify-center items-center">
-                    <div class="menu-icon rounded-full border border-outline p-2 mx-1">
-                        <div class="icon size-5 cursor-pointer">
-                            <img src="assets/icons/notif-icon.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="menu-icon rounded-full border border-outline p-2 mx-1">
-                        <div class="icon size-5 cursor-pointer">
-                            <img src="assets/icons/message-icon.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="mx-4 h-8 w-px bg-outline"></div>
-                    <div class="profil flex items-center justify-center">
-                        <div class="greeting text-end">
-                            <p class="text-secondary text-xs">Halo,</p>
-                            <p class="text-light font-bold text-sm">Janeeee</p>
-                        </div>
-                        <div class="img-wrap size-8 mx-3 cursor-pointer">
-                            <img src="assets/profil-picture.png" alt="" />
-                        </div>
-                    </div>
-                </div>
+            <span class="text-sm">Tanding</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="kupon()">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/rewards-icon.png" alt="" />
             </div>
-            <!-- Top Bar End -->
-
-            <!-- Heading Start -->
-            <div class="heading flex flex-nowrap justify-between">
-                <div class="heading mb-6 ml-[10%] w-4/5">
-                    <h1 class="text-light font-extrabold text-xl">Mau Main Dimana?</h1>
-                    <p class="text-secondary text-xs">
-                        Cari Lapangan yang kamu Suka!!
-                    </p>
-                </div>
+            <span class="text-sm">Kupon</span>
+          </div>
+          <div
+            class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
+            onclick="sewa()">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/aiCustom-icon.png" alt="" />
             </div>
-            <!-- Heading End -->
-
-            <!-- catalogs start -->
-            <div class="container mx-auto p-5">
-                <div class="flex flex-wrap justify-center">
-                    <div class="flex justify-center space-x-4 max-w-7xl mx-auto mt-8 flex-wrap">
-                        <!-- Card 1 -->
-                        <div class="relative m-10 bg-[#31294D] rounded-2xl overflow-hidden shadow-lg w-80 "
-                            onclick="lapangan()">
-                            <!-- Background Image -->
-                            <img src="./assets/unsplash_70YxSTWa2Zw.png" alt="Soccer Stadium"
-                                class="w-full h-52 object-cover">
-
-                            <!-- Overlay and Text -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-4 flex items-center space-x-2 bg-gradient-to-r from-[#31294D]/90 to-transparent">
-                                <!-- Logo/Icon -->
-                                <img src="./assets/imilkom 1.png" alt="Soccer Logo" class="w-10 h-10 rounded-full">
-
-                                <!-- Text Section -->
-                                <div>
-                                    <h2 class="text-white font-semibold text-lg">Sanobar Mini Soccer</h2>
-                                    <div class="flex items-center text-yellow-400 text-sm space-x-1">
-                                        <span>&#9733; 4.5</span>
-                                        <span class="text-gray-300">(200 Ulasan)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="relative m-10 bg-[#31294D] rounded-2xl overflow-hidden shadow-lg w-80">
-                            <!-- Background Image -->
-                            <img src="./assets/unsplash_70YxSTWa2Zw.png" alt="Soccer Stadium"
-                                class="w-full h-52 object-cover">
-
-                            <!-- Overlay and Text -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-4 flex items-center space-x-2 bg-gradient-to-r from-[#31294D]/90 to-transparent">
-                                <!-- Logo/Icon -->
-                                <img src="./assets/imilkom 1.png" alt="Soccer Logo" class="w-10 h-10 rounded-full">
-
-                                <!-- Text Section -->
-                                <div>
-                                    <h2 class="text-white font-semibold text-lg">Olympic Stadium</h2>
-                                    <div class="flex items-center text-yellow-400 text-sm space-x-1">
-                                        <span>&#9733; 4.7</span>
-                                        <span class="text-gray-300">(150 Ulasan)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="relative m-10 bg-[#31294D] rounded-2xl overflow-hidden shadow-lg w-80">
-                            <!-- Background Image -->
-                            <img src="./assets/unsplash_70YxSTWa2Zw.png" alt="Soccer Stadium"
-                                class="w-full h-52 object-cover">
-
-                            <!-- Overlay and Text -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-4 flex items-center space-x-2 bg-gradient-to-r from-[#31294D]/90 to-transparent">
-                                <!-- Logo/Icon -->
-                                <img src="./assets/imilkom 1.png" alt="Soccer Logo" class="w-10 h-10 rounded-full">
-
-                                <!-- Text Section -->
-                                <div>
-                                    <h2 class="text-white font-semibold text-lg">Arena Stadium</h2>
-                                    <div class="flex items-center text-yellow-400 text-sm space-x-1">
-                                        <span>&#9733; 4.8</span>
-                                        <span class="text-gray-300">(300 Ulasan)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <span class="text-sm">Sewa Lapangan</span>
+          </div>
+        </nav>
+      </div>
+      <hr class="my-7 border-outline" />
+      <div class="other-tab">
+        <p class="uppercase font-semibold text-xs">Lainnya</p>
+        <nav>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="profil()">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/settings-icon.png" alt="" />
             </div>
-            <!-- Main Content End -->
-    </main>
+            <span class="text-sm">Profil</span>
+          </div>
 
-    <script>
+          <div
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="keluar()">
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/logout-icon.png" alt="" />
+            </div>
+            <span class="text-sm">Keluar</span>
+          </div>
+        </nav>
+      </div>
+    </aside>
+    <!-- Sidebar End -->
 
+    <!-- Main Content Start -->
+    <div class="content bg-background rounded-l-[60px] flex-grow ml-6 overflow-auto">
+      <!-- Top Bar Start -->
+      <div class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between">
+        <div
+          class="flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
+          <input type="text" placeholder="Cari..."
+            class="text-sm text-secondary bg-transparent focus:outline-none w-full" />
+          <div class="icon-wrap size-5 cursor-pointer mx-3">
+            <img src="assets/icons/search-icon.png" alt="Search Icon" />
+          </div>
+        </div>
+        <div class="profil-tab flex justify-center items-center">
+          <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+            <div class="icon size-5 cursor-pointer">
+              <img src="assets/icons/notif-icon.png" alt="" />
+            </div>
+          </div>
+          <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+            <div class="icon size-5 cursor-pointer">
+              <img src="assets/icons/message-icon.png" alt="" />
+            </div>
+          </div>
+          <div class="mx-4 h-8 w-px bg-outline"></div>
+          <div class="profil flex items-center justify-center">
+            <div class="greeting text-end">
+              <p class="text-secondary text-xs">Halo,</p>
+              <p class="text-light font-bold text-sm">Janeeee</p>
+            </div>
+            <div class="img-wrap size-8 mx-3 cursor-pointer">
+              <img src="assets/profil-picture.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Bar End -->
 
-        function lapangan() {
-            window.location.href = "sewalap3.html"
-        }
+      <!-- Heading Start -->
+      <div class="heading flex flex-nowrap justify-between">
+        <div class="heading mb-6 ml-[10%] w-4/5">
+          <h1 class="text-light font-extrabold text-xl">Mau Main Dimana?</h1>
+          <p class="text-secondary text-xs">Cari Lapangan yang kamu Suka!!</p>
+        </div>
+      </div>
+      <!-- Heading End -->
 
-        function overview() {
-            window.location.href = "overview.html"
-        }
+      <!-- catalogs start -->
+      <div class="container mx-auto p-5">
+        <div class="flex flex-wrap justify-center">
+          <div class="flex justify-center space-x-4 max-w-7xl mx-auto mt-8 flex-wrap">
+            <!-- Card 1 -->
+            <div id="community-container" class="flex flex-wrap justify-center"></div>
+            <!-- Card 2 -->
+          </div>
+        </div>
+      </div>
 
-        function komunitas() {
-            window.location.href = "community.html"
-        }
-        function main() {
-            window.location.href = "matchmaking.html"
-        }
-        function kupon() {
-            window.location.href = "reward.html"
-        }
-        function sewa() {
-            window.location.href = "sewa_lapangan.html"
-        }
-        function profil() {
-            window.location.href = "profile.html"
-        }
-        function tolong() {
-            window.location.href = "help.html"
-        }
-        function keluar() {
-            window.location.href = "login.html"
-        }
-    </script>
+      <!-- Main Content End -->
+      <div class="button-wrap mb-8 absolute bottom-5 right-36">
+        <div
+          class="button text-center text-5xl font-extralight rounded-full border-light w-16 h-16 cursor-pointer flex justify-center items-center mx-1 bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] hover:bg-gradient-to-b hover:from-[#6F4FFF] hover:to-[#6F4FFF]"
+          onclick="addLapangan()">
+          +
+        </div>
+      </div>
+    </div>
+  </main>
 
+  <div id="edit-form" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-8 rounded-lg w-1/3">
+      <h2 class="text-2xl font-bold mb-4 text-black">Edit Lapangan</h2>
+      <form id="edit-community-form">
+        <input type="hidden" id="edit-id" class="hidden" />
+        <div class="mb-4">
+          <label for="edit-name" class="block text-black font-bold mb-2">Nama Lapangan:</label>
+          <input type="text" id="edit-name"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" />
+        </div>
+        <div class="mb-4">
+          <label for="edit-type" class="block font-bold mb-2 text-black">Jenis:</label>
+          <input type="text" id="edit-type"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" />
+        </div>
+        <div class="mb-4">
+          <label for="edit-location" class="block text-black font-bold mb-2">Lokasi:</label>
+          <input type="text" id="edit-location"
+            class="w-full px-3 py-2 border rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div class="mb-4">
+          <label for="edit-facilities" class="block text-black font-bold mb-2">Fasilitas:</label>
+          <input type="text" id="edit-facilities"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" />
+        </div>
+        <div class="mb-4">
+          <label for="edit-price" class="block text-black font-bold mb-2">Harga / Jam:</label>
+          <input type="number" id="edit-price"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" />
+        </div>
+        <div class="mb-4">
+          <label for="edit-avaible" class="block text-black font-bold mb-2">avaible:</label>
+          <input type="text" id="edit-avaible"
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" />
+        </div>
+        <div class="flex justify-end">
+          <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded-lg mr-2" onclick="closeEditForm()">
+            Batal
+          </button>
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+            Simpan
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function overview() {
+      window.location.href = "overview.html";
+    }
+
+    function komunitas() {
+      window.location.href = "community.html";
+    }
+    function addLapangan() {
+      window.location.href = "add_lapangan.html";
+    }
+    function main() {
+      window.location.href = "matchmaking.html";
+    }
+    function kupon() {
+      window.location.href = "reward.html";
+    }
+    function sewa() {
+      window.location.href = "sewa_lapangan.html";
+    }
+    function profil() {
+      window.location.href = "profile.html";
+    }
+    function tolong() {
+      window.location.href = "help.html";
+    }
+    function keluar() {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <script src="script/dataLapangan.js"></script>
 </body>
 
 </html>

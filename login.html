@@ -38,7 +38,9 @@
     <div class="w-full md:w-1/2 flex items-center justify-center" style="min-height: 100vh">
       <div class="w-3/4">
         <div class="logo-wrap text-center mb-8">
-          <img src="assets/logo.png" alt="Sportistic Logo" class="mx-auto mb-4" width="200" height="50" />
+          <a href="index.html"><img src="assets/logo.png" alt="Sportistic Logo" class="mx-auto w-72" width="200"
+              height="50" /></a>
+
           <h2 class="button text-4xl font-bold">Selamat Datang</h2>
           <p class="">Selamat Datang! Masuk dulu!!</p>
         </div>
@@ -88,7 +90,37 @@
   </main>
   <script>
     function login() {
-      window.location.href = "overview.html";
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      fetch("http://127.0.0.1:8000/api/users/login", {
+        // Endpoint login sesuai dengan yang ada di backend
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            return response.json().then((data) => {
+              throw new Error(data.message || "Login gagal");
+            });
+          }
+          return response.json();
+        })
+        .then((data) => {
+          alert("Login berhasil!");
+          localStorage.setItem("auth_token", data.data.token); // Simpan token di localStorage
+          window.location.href = "overview.html"; // Redirect ke halaman overview setelah login
+        })
+        .catch((error) => {
+          console.error(error);
+          alert("Terjadi kesalahan: " + error.message);
+        });
     }
   </script>
 </body>
