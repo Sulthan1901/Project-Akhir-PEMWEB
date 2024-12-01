@@ -1,3 +1,4 @@
+gi
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,20 +128,16 @@
       <div class="flex flex-col mt-3 mb-5">
         <div class="flex flex-col items-center justify-center space-y-4">
           <!-- Display selected image -->
-           <!-- 
-            <div id="preview" class="mt-4">
-              <p class="text-gray-500">Tidak ada foto terpilih</p>
-            </div>
-            -->
+          <div id="preview" class="mt-4">
+            <p class="text-gray-500">Tidak ada foto terpilih</p>
+          </div>
 
           <!-- Button to trigger file selection -->
-         <!--
           <button id="selectImageButton"
-          class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none">
-          Ubah Foto
-        </button>
-        
-        -->
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none">
+            Ubah Foto
+          </button>
+
           <!-- Hidden file input -->
           <input type="file" id="fileInput" accept="image/*" class="hidden" onchange="handleFileSelect(event)" />
         </div>
@@ -150,13 +147,16 @@
           class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
         <!-- input username end -->
 
-      
-        <!-- input password start  -->
-        <input type="password" id="password" placeholder="password"
+        <!-- input address start  -->
+        <input type="text" id="address" placeholder="Alamat"
           class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
-        <!-- input password end -->
+        <!-- input address end -->
 
-        
+        <!-- input email start  -->
+        <input type="email" id="email" placeholder="Email"
+          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
+        <!-- input email end -->
+
         <!-- tombol save start -->
         <div class="flex justify-center mt-7 space-x-4">
           <!-- Tombol Simpan -->
@@ -172,8 +172,7 @@
             Kembali
           </button>
         </div>
-        
-        
+
         <!-- tombol save end -->
 
         <!-- Overview Section End -->
@@ -203,14 +202,10 @@
       }
     }
 
-    function back()  {
-      window.location.href = "profile.html"
-    }
-    
     function overview() {
       window.location.href = "overview.html"
     }
-    function Simpan()  {
+    function Simpan() {
       window.location.href = "profile.html"
     }
 
@@ -234,6 +229,9 @@
     }
     function keluar() {
       window.location.href = "login.html"
+    }
+    function back(){
+      window.location.href = "profile.html"
     }
   </script>
 </body>
