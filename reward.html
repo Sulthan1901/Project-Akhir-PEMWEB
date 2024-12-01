@@ -9,7 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -73,8 +73,8 @@
           <div
             class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
             onclick="kupon()">
-            <div class="icon-wrap size-5 mr-3 ">
-              <img src="assets/icons/rewards-icon.png" class=" bg-black rounded-full p-1  " alt="" />
+            <div class="icon-wrap size-5 mr-3">
+              <img src="assets/icons/rewards-icon.png" class="bg-black" alt="" />
             </div>
             <span class="text-sm">Kupon</span>
           </div>
@@ -94,20 +94,13 @@
         <nav>
           <div
             class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="profil()">
+            onclick="profil">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/settings-icon.png" alt="" />
             </div>
             <span class="text-sm">Profil</span>
           </div>
-          <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="tolong()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/help-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Bantuan</span>
-          </div>
+
           <div
             class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
             onclick="keluar()">
@@ -148,10 +141,10 @@
           <div class="profil flex items-center justify-center">
             <div class="greeting text-end">
               <p class="text-secondary text-xs">Halo,</p>
-              <p class="text-light font-bold text-sm">Janeeee</p>
+              <p class="text-light font-bold text-sm" id="username"></p>
             </div>
             <div class="img-wrap size-8 mx-3 cursor-pointer">
-              <img src="assets/profil-picture.png" alt="" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg" alt="" />
             </div>
           </div>
         </div>
@@ -184,10 +177,13 @@
           </p>
         </div>
         <div class="button-wrap flex flex-wrap mb-8">
-          <div
-            class="button text-center font-semibold rounded-full border-light py-2 w-36 cursor-pointer mx-1 text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]">
-            Tambah
-          </div>
+          <a href="overview.html">
+            <div
+              class="button text-center font-semibold rounded-full border-light py-2 w-36 cursor-pointer mx-1 text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]">
+              Okay
+            </div>
+          </a>
+
         </div>
       </div>
       <!-- Card End -->
@@ -197,33 +193,34 @@
   </main>
 
   <script>
-
     function overview() {
-      window.location.href = "overview.html"
+      window.location.href = "overview.html";
     }
 
     function komunitas() {
-      window.location.href = "community.html"
+      window.location.href = "community.html";
     }
     function main() {
-      window.location.href = "matchmaking.html"
+      window.location.href = "matchmaking.html";
     }
     function kupon() {
-      window.location.href = "reward.html"
+      window.location.href = "reward.html";
     }
     function sewa() {
-      window.location.href = "sewa_lapangan.html"
+      window.location.href = "sewa_lapangan.html";
     }
     function profil() {
-      window.location.href = "profile.html"
+      window.location.href = "profile.html";
     }
     function tolong() {
-      window.location.href = "help.html"
+      window.location.href = "help.html";
     }
     function keluar() {
-      window.location.href = "login.html"
+      window.location.href = "login.html";
     }
   </script>
+
+  <script src="script/username.js"></script>
 </body>
 
 </html>
