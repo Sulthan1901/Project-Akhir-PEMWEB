@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <title>Sportistic</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              theme: "#0A061E",
+              background: "#1A1531",
+              button: "#FFD88D",
+              card: "#27223E",
+              light: "#DBD8E9",
+              outline: "#353147",
+              secondary: "#7E7997",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-theme text-light">
+    <main class="flex font-poppins h-screen">
+      <!-- Sidebar Start -->
+      <aside class="sidebar mx-5">
+        <div
+          class="logo flex mt-5 justify-center items-center font-bold text-xl cursor-pointer"
+        >
+          <div class="logo-wrap w-52 mx-1">
+            <a href="overview.html"><img src="assets/logo.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="general-tab">
+          <p class="uppercase font-semibold text-xs">Umum</p>
+          <nav>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="overview()"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/overview-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Ringkasan</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/people-icon.png" alt="" />
+              </div>
+              <span class="text-sm" onclick="komunitas()">Komunitas</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/manageTask-icon.png" alt="" />
+              </div>
+              <span class="text-sm" onclick="main()">Tanding</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img
+                  src="assets/icons/rewards-icon.png"
+                  class="bg-black"
+                  alt=""
+                />
+              </div>
+              <span class="text-sm" onclick="kupon()">Kupon</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/aiCustom-icon.png" alt="" />
+              </div>
+              <span class="text-sm" onclick="sewa()">Sewa Lapangan</span>
+            </div>
+          </nav>
+        </div>
+        <hr class="my-7 border-outline" />
+        <div class="other-tab">
+          <p class="uppercase font-semibold text-xs">Lainnya</p>
+          <nav>
+            <div
+              class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img
+                  src="assets/icons/settings-icon.png"
+                  class="bg-black"
+                  alt=""
+                />
+              </div>
+              <span class="text-sm" onclick="profil()">Profil</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/help-icon.png" alt="" />
+              </div>
+              <span class="text-sm" onclick="tolong()">Bantuan</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/logout-icon.png" alt="" />
+              </div>
+              <span class="text-sm" onclick="keluar()">Keluar</span>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <!-- Sidebar End -->
+
+      <!-- Main Content Start -->
+      <div class="content bg-background rounded-l-[60px] flex-grow ml-6">
+        <!-- Top Bar Start -->
+        <!-- Top Bar End -->
+
+        <!-- Heading Start -->
+        <div class="heading mx-[6.5rem]">
+          <h1 class="text-light font-extrabold text-xl mt-12">
+            Edit Profil Pengguna
+          </h1>
+        </div>
+        <!-- Heading End -->
+
+        <form action="" onsubmit="return false;">
+          <div class="flex flex-col mt-3 mb-5">
+            <!-- input username start  -->
+            <input
+              type="text"
+              id="username"
+              placeholder="Nama Pengguna"
+              class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"
+            />
+            <!-- input username end -->
+
+            <!-- input password start  -->
+            <input
+              type="password"
+              id="password"
+              placeholder="password"
+              class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"
+            />
+            <!-- input password end -->
+
+            <!-- tombol save start -->
+            <div class="flex justify-center mt-7 space-x-4">
+              <!-- Tombol Simpan -->
+              <button
+                class="text-center font-semibold rounded-full py-2 w-36 cursor-pointer text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] text-white hover:opacity-90"
+                id="submit-btn"
+                type="submit"
+                onclick="Simpan()"
+              >
+                Simpan
+              </button>
+              <!-- Tombol Kembali -->
+              <button
+                class="text-center font-semibold rounded-full py-2 w-36 cursor-pointer text-sm bg-gradient-to-b from-gray-300 to-gray-600 text-white hover:opacity-90"
+                onclick="back()"
+              >
+                Kembali
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script>
+      // Open file dialog when button is clicked
+      document
+        .getElementById("selectImageButton")
+        .addEventListener("click", () => {
+          document.getElementById("fileInput").click();
+        });
+
+      // Handle file selection and show preview
+      function handleFileSelect(event) {
+        const file = event.target.files[0];
+        const previewContainer = document.getElementById("preview");
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            previewContainer.innerHTML = `
+            <img src="${e.target.result}" alt="Selected Image" class="w-40 h-40 rounded-full mb-4">
+          `;
+          };
+          reader.readAsDataURL(file);
+        } else {
+          previewContainer.innerHTML = `<p class="text-gray-500">Tidak ada foto terpilih</p>`;
+        }
+      }
+
+      function back() {
+        window.location.href = "profile.html";
+      }
+
+      function overview() {
+        window.location.href = "overview.html";
+      }
+      function Simpan() {
+        window.location.href = "profile.html";
+      }
+
+      function komunitas() {
+        window.location.href = "community.html";
+      }
+      function main() {
+        window.location.href = "matchmaking.html";
+      }
+      function kupon() {
+        window.location.href = "reward.html";
+      }
+      function sewa() {
+        window.location.href = "sewa_lapangan.html";
+      }
+      function profil() {
+        window.location.href = "profile.html";
+      }
+      function tolong() {
+        window.location.href = "help.html";
+      }
+      function keluar() {
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <script>
+      const token = localStorage.getItem("auth_token"); // Ambil token dari localStorage
+
+      // Fungsi untuk menangkap data dari form dan mengirim request
+      async function updateUserData(event) {
+        event.preventDefault(); // Mencegah form reload halaman secara default
+
+        // Ambil nilai dari input form
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (!username || !password) {
+          alert("Username dan Password tidak boleh kosong.");
+          return;
+        }
+
+        if (!token) {
+          alert("Token tidak ditemukan. Silakan login terlebih dahulu.");
+          return;
+        }
+
+        try {
+          // Data request
+          const requestData = { username, password };
+
+          // Fetch API dengan method PATCH
+          const response = await fetch(
+            "http://127.0.0.1:8000/api/users/current",
+            {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+              body: JSON.stringify(requestData),
+            }
+          );
+
+          // Cek jika ada error
+          if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || `HTTP ${response.status}`);
+          }
+
+          // Tampilkan data respon di console
+          const data = await response.json();
+          console.log("Data berhasil diperbarui:", data);
+          alert("Data berhasil diperbarui!");
+        } catch (error) {
+          console.error("Gagal memperbarui data:", error);
+          alert(`Gagal memperbarui data: ${error.message}`);
+        }
+      }
+
+      // Pasang event listener pada tombol submit
+      document
+        .getElementById("submit-btn")
+        .addEventListener("click", updateUserData);
+    </script>
+  </body>
+</html>

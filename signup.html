@@ -33,10 +33,18 @@
   </head>
 
   <body class="bg-theme text-light">
-    <main class="flex flex-col md:flex-row font-poppins h-screen">
-      <!-- Left Form Section -->
+    <main class="flex font-poppins h-screen">
+      <!-- Left Image Section -->
+      <div class="w-1/2 relative bg-theme">
+        <img
+          src="assets/Right Side.png"
+          alt="Illustration of a person in sports attire jumping with a dynamic background"
+          class="absolute h-full object-cover"
+        />
+      </div>
+      <!-- Right Form Section -->
       <div
-        class="w-full md:w-1/2 flex items-center justify-center"
+        class="w-1/2 flex items-center justify-center"
         style="min-height: 100vh"
       >
         <div class="w-3/4">
@@ -48,16 +56,25 @@
               width="200"
               height="50"
             />
-            <h2 class="button text-4xl font-bold">Selamat Datang</h2>
-            <p class="">Selamat Datang! Masuk dulu!!</p>
+            <h2 class="button text-4xl font-bold">DAFTAR</h2>
+            <p class="">Halo! Isi Data Anda!.</p>
           </div>
           <form>
+            <div class="mb-4">
+              <label for="username" class="block mb-2">Nama Pengguna</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                class="w-full px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"
+              />
+            </div>
             <div class="mb-4">
               <label for="email" class="block mb-2">Email</label>
               <input
                 type="email"
                 id="email"
-                placeholder="Masukin Email kamu"
+                placeholder="Enter your email"
                 class="w-full px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"
               />
             </div>
@@ -70,18 +87,24 @@
                 class="w-full px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"
               />
             </div>
-            <div class="flex items-center mb-4">
-              <input type="checkbox" id="remember-me" class="mr-2" />
-              <label for="remember-me" class="text-light">Ingat Saya</label>
-              <a href="#" class="ml-auto text-secondary">Lupa Sandi?</a>
+            <div class="mb-6">
+              <label for="confirm-password" class="block mb-2"
+                >Konfirmasi Sandi</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder=""
+                class="w-full px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500"
+              />
             </div>
             <div class="mb-4">
               <button
                 type="button"
                 class="w-full py-2 bg-button text-gray-900 font-bold rounded-lg hover:bg-yellow-600"
-                onclick="login()"
+                onclick="Daftar()"
               >
-                Masuk
+                Daftar
               </button>
             </div>
             <div class="mb-4">
@@ -94,55 +117,55 @@
                   alt="Google Logo"
                   class="w-5 h-5 mr-2"
                 />
-                Masuk Lewat Google
+                Daftar dengan Google
               </button>
             </div>
             <div class="text-center">
               <p class="text-secondary">
-                Sudah Punya akun?
-                <a href="signup.html" class="text-light">Daftar Gratis!</a>
+                Sudah punya akun?
+                <a href="login.html" class="text-light">Masuk sekarang!</a>
               </p>
             </div>
           </form>
         </div>
       </div>
-      <!-- Right Image Section, hidden on small screens -->
-      <div class="hidden md:flex w-1/2 relative bg-theme justify-end">
-        <img
-          src="assets/Right Side.png"
-          alt="Illustration of a person in sports attire jumping with a dynamic background"
-          class="h-full object-cover"
-        />
-      </div>
     </main>
     <script>
-      function login() {
+      function Daftar() {
+        const username = document.getElementById("username").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirm-password").value;
 
-        fetch("http://127.0.0.1:8000/api/users/login", {
-          // Endpoint login sesuai dengan yang ada di backend
+        if (password !== confirmPassword) {
+          alert("Password dan konfirmasi password tidak cocok!");
+          return;
+        }
+
+        fetch("http://127.0.0.1:8000/api/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            username: username,
             email: email,
             password: password,
+            password_confirmation: confirmPassword,
           }),
         })
           .then((response) => {
             if (!response.ok) {
               return response.json().then((data) => {
-                throw new Error(data.message || "Login gagal");
+                throw new Error(data.message || "Pendaftaran gagal");
               });
             }
             return response.json();
           })
           .then((data) => {
-            alert("Login berhasil!");
-            localStorage.setItem("auth_token", data.data.token); // Simpan token di localStorage
-            window.location.href = "overview.html"; // Redirect ke halaman overview setelah login
+            alert("Pendaftaran berhasil! Silakan login.");
+            window.location.href = "login.html";
           })
           .catch((error) => {
             console.error(error);
