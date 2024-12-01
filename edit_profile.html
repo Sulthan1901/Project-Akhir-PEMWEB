@@ -164,7 +164,7 @@
           <!-- Tombol Kembali -->
           <button
             class="text-center font-semibold rounded-full py-2 w-36 cursor-pointer text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] text-white hover:opacity-90"
-            onclick="Kembali()">
+            onclick="back()">
             Kembali
           </button>
         </div>
@@ -198,10 +198,14 @@
       }
     }
 
+    function back()  {
+      window.location.href = "profile.html"
+    }
+    
     function overview() {
       window.location.href = "overview.html"
     }
-    function Simpan() {
+    function Simpan()  {
       window.location.href = "profile.html"
     }
 

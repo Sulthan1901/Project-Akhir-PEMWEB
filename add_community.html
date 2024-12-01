@@ -161,7 +161,7 @@
         <!-- Tombol Kembali -->
         <button
           class="text-center font-semibold rounded-full py-2 w-36 cursor-pointer text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] text-white hover:opacity-90"
-          onclick="Kembali()">
+          onclick="back()">
           Kembali
         </button>
       </div>
@@ -171,6 +171,11 @@
     </div>
   </main>
   <script>
+
+    function back(){
+      window.location.href="community.html"
+    }
+
     function Simpan() {
       window.location.href = "community.html";
     }
