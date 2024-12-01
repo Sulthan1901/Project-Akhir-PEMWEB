@@ -37,8 +37,8 @@
   <main class="flex font-poppins h-screen">
     <!-- Sidebar Start -->
     <aside class="sidebar mx-5">
-      <div class="logo flex m-5 justify-center items-center font-bold text-xl cursor-pointer">
-        <div class="logo-wrap w-28 mx-1">
+      <div class="logo flex mt-5 justify-center items-center font-bold text-xl cursor-pointer">
+        <div class="logo-wrap w-52 mx-1">
           <a href="overview.html"><img src="assets/logo.png" alt="" /></a>
         </div>
       </div>
@@ -46,35 +46,40 @@
         <p class="uppercase font-semibold text-xs">Umum</p>
         <nav>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="overview()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/overview-icon.png" alt="" />
             </div>
             <span class="text-sm">Ringkasan</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30">
+            class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
+            onclick="komunitas()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/people-icon.png" alt="" />
             </div>
             <span class="text-sm">Komunitas</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="main()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/manageTask-icon.png" alt="" />
             </div>
             <span class="text-sm">Tanding</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="kupon()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/rewards-icon.png" alt="" />
             </div>
             <span class="text-sm">Kupon</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="sewa()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/aiCustom-icon.png" alt="" />
             </div>
@@ -87,21 +92,24 @@
         <p class="uppercase font-semibold text-xs">Lainnya</p>
         <nav>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="profil()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/settings-icon.png" alt="" />
             </div>
             <span class="text-sm">Profil</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="tolong()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/help-icon.png" alt="" />
             </div>
             <span class="text-sm">Bantuan</span>
           </div>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+            onclick="keluar()">
             <div class="icon-wrap size-5 mr-3">
               <img src="assets/icons/logout-icon.png" alt="" />
             </div>
@@ -186,6 +194,35 @@
   <script>
     function Simpan() {
       window.location.href = "community.html";
+    }
+
+    function overview() {
+      window.location.href = "overview.html"
+    }
+
+    function komunitas() {
+      window.location.href = "community.html"
+    }
+    function main() {
+      window.location.href = "matchmaking.html"
+    }
+    function kupon() {
+      window.location.href = "reward.html"
+    }
+    function sewa() {
+      window.location.href = "sewa_lapangan.html"
+    }
+    function profil() {
+      window.location.href = "profile.html"
+    }
+    function tolong() {
+      window.location.href = "help.html"
+    }
+    function keluar() {
+      window.location.href = "login.html"
+    }
+    function AddCommunity() {
+      window.location.href = "add_community.html"
     }
   </script>
 </body>
