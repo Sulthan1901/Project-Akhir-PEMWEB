@@ -146,27 +146,29 @@
           class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
         <!-- input username end -->
 
-        <!-- input address start  -->
-        <input type="text" id="address" placeholder="Alamat"
+      
+        <!-- input password start  -->
+        <input type="password" id="password" placeholder="password"
           class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
-        <!-- input address end -->
+        <!-- input password end -->
 
-        <!-- input email start  -->
-        <input type="email" id="email" placeholder="Email"
-          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
-        <!-- input email end -->
-
-        <!-- input phone number start  -->
-        <input type="tel" id="phone number" placeholder="Nomor Telepon"
-          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
-        <!-- input phone number end -->
-
+        
         <!-- tombol save start -->
-        <div
-          class="mt-7 button text-center font-semibold rounded-full border-light py-2 w-36 cursor-pointer mx-[6.5rem] text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]"
-          onclick="Simpan()">
-          Simpan
+        <div class="flex justify-center mt-7 space-x-4">
+          <!-- Tombol Simpan -->
+          <button
+            class="text-center font-semibold rounded-full py-2 w-36 cursor-pointer text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] text-white hover:opacity-90"
+            onclick="Simpan()">
+            Simpan
+          </button>
+          <!-- Tombol Kembali -->
+          <button
+            class="text-center font-semibold rounded-full py-2 w-36 cursor-pointer text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] text-white hover:opacity-90"
+            onclick="Kembali()">
+            Kembali
+          </button>
         </div>
+        
         <!-- tombol save end -->
 
         <!-- Overview Section End -->
