@@ -46,11 +46,11 @@
         <p class="uppercase font-semibold text-xs">Umum</p>
         <nav>
           <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
-            <div class="icon-wrap size-5 mr-3">
+            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"onclick="overview()">
+            <div class="icon-wrap size-5 mr-3" >
               <img src="assets/icons/overview-icon.png" alt="" />
             </div>
-            <span class="text-sm" onclick="overview()">Ringkasan</span>
+            <span class="text-sm" >Ringkasan</span>
           </div>
           <div
             class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3">
@@ -157,37 +157,51 @@
       </div>
       <!-- Heading End -->
 
-      <!-- Profile Section -->
-      <div class="flex flex-col mt-3 mb-5" id="profileSection">
+      <div class="flex flex-col mt-3 mb-5">
         <img src="assets/profil-picture.png" alt="Current Profile Picture" id="profilePic"
           class="w-32 h-32 rounded-full mx-auto object-cover">
 
-        <!-- Display Profile Data -->
-        <div id="profileData" class="mt-5 text-center">
-          <p class="text-light font-semibold text-lg" id="displayName">Username: Jane Doe</p>
-          <p class="text-secondary mt-2" id="displayAddress">Alamat: Jakarta, Indonesia</p>
-          <p class="text-secondary mt-2" id="displayEmail">Email: jane.doe@example.com</p>
-          
-        </div>
+        <input type="file" id="foto-profil"
+          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500">
 
-        <!-- Edit Button -->
+        <!-- input username start  -->
+        <input type="text" id="username" placeholder="Nama Pengguna"
+          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
+        <!-- input username end -->
+
+        <!-- input address start  -->
+        <input type="text" id="address" placeholder="Alamat"
+          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
+        <!-- input address end -->
+
+        <!-- input email start  -->
+        <input type="email" id="email" placeholder="Email"
+          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
+        <!-- input email end -->
+
+        <!-- input phone number start  -->
+        <input type="tel" id="phone number" placeholder="Nomor Telepon"
+          class="mt-7 mx-[6.5rem] px-4 py-2 text-light bg-theme border rounded-lg focus:outline-none focus:border-gray-500" />
+        <!-- input phone number end -->
+
+        <!-- tombol save start -->
         <div
-          class="mt-7 button text-center font-semibold rounded-full border-light py-2 w-36 cursor-pointer mx-auto text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]"
-          onclick="profil()">
-          Edit
+          class="mt-7 button text-center font-semibold rounded-full border-light py-2 w-36 cursor-pointer mx-[6.5rem] text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]"
+          onclick="Simpan()">
+          Simpan
         </div>
+        <!-- tombol save end -->
 
         <!-- Overview Section End -->
   </main>
 
   <script>
 
-    function profil(){
-        window.location="profile.html"
-    }
-
     function overview() {
       window.location.href = "overview.html"
+    }
+    function Simpan() {
+      window.location.href = "profile.html"
     }
 
     function komunitas() {
