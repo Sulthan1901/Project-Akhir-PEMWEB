@@ -38,8 +38,8 @@
   <main class="flex font-poppins h-screen">
     <!-- Sidebar Start -->
     <aside class="sidebar mx-5">
-      <div class="logo flex m-5 justify-center items-center font-bold text-xl cursor-pointer">
-        <div class="logo-wrap w-28 mx-1">
+      <div class="logo flex mt-5 justify-center items-center font-bold text-xl cursor-pointer">
+        <div class="logo-wrap w-52 mx-1">
           <a href="overview.html"><img src="assets/logo.png" alt="" /></a>
         </div>
       </div>
@@ -126,10 +126,11 @@
       <!-- Top Bar Start -->
       <div class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between">
         <div
-          class="search-tab flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
-          <p class="text-sm text-secondary pr-5">Cari...</p>
+          class="flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
+          <input type="text" placeholder="Cari..."
+            class="text-sm text-secondary bg-transparent focus:outline-none w-full" />
           <div class="icon-wrap size-5 cursor-pointer mx-3">
-            <img src="assets/icons/search-icon.png" alt="" />
+            <img src="assets/icons/search-icon.png" alt="Search Icon" />
           </div>
         </div>
         <div class="profil-tab flex justify-center items-center">
@@ -159,48 +160,48 @@
 
       <!-- Heading Start -->
       <!-- Heading Start -->
-<div class="heading flex flex-nowrap justify-between">
-    <div class="heading mb-6 ml-[10%] w-4/5">
-      <h1 class="text-light font-extrabold text-xl">Detail Pemesanan</h1>
-      <p class="text-secondary text-xs">
-        Kasih aja ini ke penjaga lapangan nya biar dikasih main
-      </p>
-    </div>
-  </div>
-  <!-- Heading End -->
-  
-  <!-- Card Start -->
-  <div class="card bg-card mx-auto flex flex-wrap w-[30%] justify-center rounded-[30px] my-10">
-    <!-- Icon Section -->
-    <div class="icon bg-[#FEE7BA] size-14 rounded-full p-4 mt-8 mb-6">
-      <img src="assets/icons/schedule-icon.png" alt="" />
-    </div>
-  
-    <!-- Information Section -->
-    <div class="info flex justify-center flex-wrap px-12 mb-8">
-      <h2 class="font-bold text-xl text-light mb-2">Detail Pemesanan</h2>
-      <ul class="text-secondary text-sm space-y-2">
-        <li><strong>Nama User:</strong> <span id="nama-user">John Doe</span></li>
-        <li><strong>Nama Lapangan:</strong> <span id="nama-lapangan">Sanobar Mini Soccer</span></li>
-        <li><strong>Mulai Main/ tanggal main:</strong> <span id="mulai-main">10:00 AM</span></li>
-        <li><strong>Lama Durasi:</strong> <span id="lama-durasi">2 Jam</span></li>
-        <li><strong>Notes:</strong> <span id="notes">Bawa bola sendiri</span></li>
-        <li><strong>Status:</strong> <span id="status">Confirmed</span></li>
-      </ul>
-    </div>
-  
-    <!-- Button Section -->
-    <div class="button-wrap flex flex-wrap mb-8">
-      <div
-        class="button text-center font-semibold rounded-full border-light py-2 w-36 cursor-pointer mx-1 text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]">
-        Kembali
+      <div class="heading flex flex-nowrap justify-between">
+        <div class="heading mb-6 ml-[10%] w-4/5">
+          <h1 class="text-light font-extrabold text-xl">Detail Pemesanan</h1>
+          <p class="text-secondary text-xs">
+            Kasih aja ini ke penjaga lapangan nya biar dikasih main
+          </p>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- Card End -->
-  
+      <!-- Heading End -->
 
-    <!-- Overview Section End -->
+      <!-- Card Start -->
+      <div class="card bg-card mx-auto flex flex-wrap w-[30%] justify-center rounded-[30px] my-10">
+        <!-- Icon Section -->
+        <div class="icon bg-[#FEE7BA] size-14 rounded-full p-4 mt-8 mb-6">
+          <img src="assets/icons/schedule-icon.png" alt="" />
+        </div>
+
+        <!-- Information Section -->
+        <div class="info flex justify-center flex-wrap px-12 mb-8">
+          <h2 class="font-bold text-xl text-light mb-2">Detail Pemesanan</h2>
+          <ul class="text-secondary text-sm space-y-2">
+            <li><strong>Nama User:</strong> <span id="nama-user">John Doe</span></li>
+            <li><strong>Nama Lapangan:</strong> <span id="nama-lapangan">Sanobar Mini Soccer</span></li>
+            <li><strong>Mulai Main/ tanggal main:</strong> <span id="mulai-main">10:00 AM</span></li>
+            <li><strong>Lama Durasi:</strong> <span id="lama-durasi">2 Jam</span></li>
+            <li><strong>Notes:</strong> <span id="notes">Bawa bola sendiri</span></li>
+            <li><strong>Status:</strong> <span id="status">Confirmed</span></li>
+          </ul>
+        </div>
+
+        <!-- Button Section -->
+        <div class="button-wrap flex flex-wrap mb-8">
+          <div
+            class="button text-center font-semibold rounded-full border-light py-2 w-36 cursor-pointer mx-1 text-sm bg-gradient-to-b from-[#977FFF] to-[#6F4FFF]">
+            Kembali
+          </div>
+        </div>
+      </div>
+      <!-- Card End -->
+
+
+      <!-- Overview Section End -->
   </main>
 
   <script>
