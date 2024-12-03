@@ -221,7 +221,7 @@ async function fetchAndRenderCommunities() {
     communities.forEach((community) => {
       const communityCard = `
           <div
-            class="bg-[#27223E] rounded-3xl overflow-hidden my-5 mx-5 w-[30%] flex flex-col relative"
+            class="bg-[#27223E] rounded-3xl overflow-hidden my-5 mx-5 w-[30%] flex flex-col relative cursor-pointer"
           >
             <div
               class="relative h-52 bg-cover bg-no-repeat"
@@ -242,6 +242,7 @@ async function fetchAndRenderCommunities() {
               <div class="flex justify-between items-center mt-2">
               <button
                   class="bg-[#FFD88D] text-[#0A061E] rounded-full py-1 px-4"
+                  id="hapus-button"
                   onclick="deleteCommunity(${community.id})"
                 >
                   Hapus
@@ -325,6 +326,54 @@ document
       alert(`Gagal memperbarui komunitas: ${error.message}`);
     }
   });
+
+// Tangkap elemen dengan id "add-button"
+const hapusButtons = document.querySelectorAll("#hapus-button");
+
+async function fetchCurrentUser() {
+  // Ambil token dari localStorage
+  const token = localStorage.getItem("auth_token");
+
+  // Validasi token
+  if (!token) {
+    console.error("Token tidak ditemukan. Harap login kembali.");
+    alert("Token tidak ditemukan. Harap login kembali.");
+    return;
+  }
+
+  try {
+    // Kirim request GET ke API
+    const response = await fetch("http://127.0.0.1:8000/api/users/current", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    // Periksa apakah respons berhasil
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || `HTTP ${response.status}`);
+    }
+
+    // Parse data JSON dari respons
+    const userData = await response.json();
+    console.log("Data Pengguna Saat Ini:", userData.data.role);
+
+    // Tambahkan kelas hidden jika role adalah "user"
+    if (userData.data.role !== "user") {
+      hapusButtons.forEach((hapusButton) => {
+        hapusButton.classList.remove("hidden");
+      });
+    }
+  } catch (error) {
+    console.error("Terjadi kesalahan saat mengambil data pengguna:", error);
+    alert(`Gagal mengambil data pengguna: ${error.message}`);
+  }
+}
+
+// Panggil fungsi fetchCurrentUser
+fetchCurrentUser();
 
 // Panggil fungsi saat halaman dimuat
 document.addEventListener("DOMContentLoaded", fetchAndRenderCommunities);

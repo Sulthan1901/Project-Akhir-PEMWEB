@@ -1,4 +1,4 @@
-const token = localStorage.getItem("auth_token"); // Ambil token dari localStorage
+// const token = localStorage.getItem("auth_token"); // Ambil token dari localStorage
 
 async function logoutUser() {
   if (!token) {

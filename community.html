@@ -1,255 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <title>Sportistic</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="community_style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
-  <title>Sportistic</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="community_style.css" />
-  <link rel="stylesheet" href="style.css" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        fontFamily: {
-          poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
-        },
-        extend: {
-          colors: {
-            theme: "#0A061E",
-            background: "#1A1531",
-            button: "#FFD88D",
-            card: "#27223E",
-            light: "#DBD8E9",
-            outline: "#353147",
-            secondary: "#7E7997",
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppins: ["poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              theme: "#0A061E",
+              background: "#1A1531",
+              button: "#FFD88D",
+              card: "#27223E",
+              light: "#DBD8E9",
+              outline: "#353147",
+              secondary: "#7E7997",
+            },
           },
         },
-      },
-    };
-  </script>
-</head>
+      };
+    </script>
+  </head>
 
-<body class="bg-theme text-light">
-  <main class="flex font-poppins h-screen">
-    <!-- Sidebar Start -->
-    <aside class="sidebar mx-5">
-      <div class="logo flex mt-5 justify-center items-center font-bold text-xl cursor-pointer">
-        <div class="logo-wrap w-52 mx-1">
-          <a href="overview.html"><img src="assets/logo.png" alt="" /></a>
-        </div>
-      </div>
-      <div class="general-tab">
-        <p class="uppercase font-semibold text-xs">Umum</p>
-        <nav>
-          <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="overview()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/overview-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Ringkasan</span>
-          </div>
-          <div
-            class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
-            onclick="komunitas()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/people-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Komunitas</span>
-          </div>
-          <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="main()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/manageTask-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Tanding</span>
-          </div>
-          <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="kupon()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/rewards-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Kupon</span>
-          </div>
-          <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="sewa()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/aiCustom-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Sewa Lapangan</span>
-          </div>
-        </nav>
-      </div>
-      <hr class="my-7 border-outline" />
-      <div class="other-tab">
-        <p class="uppercase font-semibold text-xs">Lainnya</p>
-        <nav>
-          <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="profil()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/settings-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Profil</span>
-          </div>
-          <div
-            class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
-            onclick="keluar()">
-            <div class="icon-wrap size-5 mr-3">
-              <img src="assets/icons/logout-icon.png" alt="" />
-            </div>
-            <span class="text-sm">Keluar</span>
-          </div>
-        </nav>
-      </div>
-    </aside>
-    <!-- Sidebar End -->
-
-    <!-- Main Content Start -->
-    <div class="content bg-background rounded-l-[60px] flex-grow ml-6 overflow-auto">
-      <!-- Top Bar Start -->
-      <div class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between">
+  <body class="bg-theme text-light">
+    <main class="flex font-poppins h-screen">
+      <!-- Sidebar Start -->
+      <aside class="sidebar mx-5">
         <div
-          class="flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3">
-          <input type="text" placeholder="Cari..."
-            class="text-sm text-secondary bg-transparent focus:outline-none w-full" />
-          <div class="icon-wrap size-5 cursor-pointer mx-3">
-            <img src="assets/icons/search-icon.png" alt="Search Icon" />
+          class="logo flex mt-5 justify-center items-center font-bold text-xl cursor-pointer"
+        >
+          <div class="logo-wrap w-52 mx-1">
+            <a href="overview.html"><img src="assets/logo.png" alt="" /></a>
           </div>
         </div>
-
-        <div class="profil-tab flex justify-center items-center">
-          <div class="menu-icon rounded-full border border-outline p-2 mx-1">
-            <div class="icon size-5 cursor-pointer">
-              <img src="assets/icons/notif-icon.png" alt="" />
+        <div class="general-tab">
+          <p class="uppercase font-semibold text-xs">Umum</p>
+          <nav>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="overview()"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/overview-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Ringkasan</span>
             </div>
-          </div>
-          <div class="menu-icon rounded-full border border-outline p-2 mx-1">
-            <div class="icon size-5 cursor-pointer">
-              <img src="assets/icons/message-icon.png" alt="" />
+            <div
+              class="button flex justify-start items-center font-semibold border-none rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3 bg-button text-theme shadow-lg shadow-button/30"
+              onclick="komunitas()"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/people-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Komunitas</span>
             </div>
-          </div>
-          <div class="mx-4 h-8 w-px bg-outline"></div>
-          <div class="profil flex items-center justify-center">
-            <div class="greeting text-end">
-              <p class="text-secondary text-xs">Halo,</p>
-              <p class="text-light font-bold text-sm" id="username"></p>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="main()"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/manageTask-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Tanding</span>
             </div>
-            <div class="img-wrap size-8 mx-3 cursor-pointer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg" alt="" />
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="kupon()"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/rewards-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Kupon</span>
             </div>
-          </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="sewa()"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/aiCustom-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Sewa Lapangan</span>
+            </div>
+          </nav>
         </div>
-      </div>
-      <!-- Top Bar End -->
-
-      <!-- Heading Start -->
-      <div class="heading flex flex-nowrap justify-between">
-        <div class="heading mb-6 ml-[10%] w-4/5">
-          <h1 class="text-light font-extrabold text-xl">Komunitas</h1>
-          <p class="text-secondary text-xs">
-            Cari teman dan bergabung dengan komunitas yang sesuai dengan
-            minatmu!!
-          </p>
+        <hr class="my-7 border-outline" />
+        <div class="other-tab">
+          <p class="uppercase font-semibold text-xs">Lainnya</p>
+          <nav>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              onclick="profil()"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/settings-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Profil</span>
+            </div>
+            <div
+              class="button flex justify-start items-center font-semibold border rounded-full border-outline py-2 pl-3 pr-16 cursor-pointer my-3"
+              id="logout"
+            >
+              <div class="icon-wrap size-5 mr-3">
+                <img src="assets/icons/logout-icon.png" alt="" />
+              </div>
+              <span class="text-sm">Keluar</span>
+            </div>
+          </nav>
         </div>
-      </div>
-      <!-- Heading End -->
+      </aside>
+      <!-- Sidebar End -->
 
-      <!-- Card Start -->
-      <div id="community-container" class="flex flex-wrap justify-center"></div>
-
-      <!-- Card End -->
-      <div class="button-wrap mb-8 absolute bottom-5 right-36">
+      <!-- Main Content Start -->
+      <div
+        class="content bg-background rounded-l-[60px] flex-grow ml-6 overflow-auto"
+      >
+        <!-- Top Bar Start -->
         <div
-          class="button text-center text-5xl font-extralight rounded-full border-light w-16 h-16 cursor-pointer flex justify-center items-center mx-1 bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] hover:bg-gradient-to-b hover:from-[#6F4FFF] hover:to-[#6F4FFF]"
-          onclick="AddCommunity()">
-          +
+          class="top-bar bg-card flex w-4/5 mx-auto m-8 rounded-2xl justify-between"
+        >
+          <div
+            class="flex w-2/5 justify-between items-center font-normal border rounded-full border-outline py-2 pl-3 m-3"
+          >
+            <input
+              type="text"
+              placeholder="Cari..."
+              class="text-sm text-secondary bg-transparent focus:outline-none w-full"
+            />
+            <div class="icon-wrap size-5 cursor-pointer mx-3">
+              <img src="assets/icons/search-icon.png" alt="Search Icon" />
+            </div>
+          </div>
+
+          <div class="profil-tab flex justify-center items-center">
+            <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+              <div class="icon size-5 cursor-pointer">
+                <img src="assets/icons/notif-icon.png" alt="" />
+              </div>
+            </div>
+            <div class="menu-icon rounded-full border border-outline p-2 mx-1">
+              <div class="icon size-5 cursor-pointer">
+                <img src="assets/icons/message-icon.png" alt="" />
+              </div>
+            </div>
+            <div class="mx-4 h-8 w-px bg-outline"></div>
+            <div class="profil flex items-center justify-center">
+              <div class="greeting text-end">
+                <p class="text-secondary text-xs">Halo,</p>
+                <p class="text-light font-bold text-sm" id="username"></p>
+              </div>
+              <div class="img-wrap size-8 mx-3 cursor-pointer">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Top Bar End -->
+
+        <!-- Heading Start -->
+        <div class="heading flex flex-nowrap justify-between">
+          <div class="heading mb-6 ml-[10%] w-4/5">
+            <h1 class="text-light font-extrabold text-xl">Komunitas</h1>
+            <p class="text-secondary text-xs">
+              Cari teman dan bergabung dengan komunitas yang sesuai dengan
+              minatmu!!
+            </p>
+          </div>
+        </div>
+        <!-- Heading End -->
+
+        <!-- Card Start -->
+        <div
+          id="community-container"
+          class="flex flex-wrap justify-center"
+        ></div>
+
+        <!-- Card End -->
+        <div class="button-wrap mb-8 absolute bottom-5 right-36">
+          <div
+            class="button text-center text-5xl font-extralight rounded-full border-light w-16 h-16 cursor-pointer flex justify-center items-center mx-1 bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] hover:bg-gradient-to-b hover:from-[#6F4FFF] hover:to-[#6F4FFF]"
+            onclick="AddCommunity()"
+          >
+            +
+          </div>
+        </div>
+
+        <!-- Main Content End -->
       </div>
-
-      <!-- Main Content End -->
+    </main>
+    <div
+      id="edit-form"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-8 rounded-lg w-1/3">
+        <h2 class="text-2xl font-bold mb-4 text-black">Edit Komunitas</h2>
+        <form id="edit-community-form">
+          <input type="hidden" id="edit-id" class="hidden" />
+          <div class="mb-4">
+            <label for="edit-nama" class="block text-black font-bold mb-2"
+              >Nama Komunitas:</label
+            >
+            <input
+              type="text"
+              id="edit-nama"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="edit-deskripsi" class="block font-bold mb-2 text-black"
+              >Deskripsi:</label
+            >
+            <textarea
+              id="edit-deskripsi"
+              rows="4"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+            ></textarea>
+          </div>
+          <div class="mb-4">
+            <label
+              for="edit-jumlah-anggota"
+              class="block text-black font-bold mb-2"
+              >Jumlah Anggota:</label
+            >
+            <input
+              type="number"
+              id="edit-jumlah-anggota"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="edit-batas-anggota"
+              class="block text-black font-bold mb-2"
+              >Batas Anggota:</label
+            >
+            <input
+              type="number"
+              id="edit-batas-anggota"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+            />
+          </div>
+          <div class="flex justify-end">
+            <button
+              type="button"
+              class="bg-gray-500 text-white px-4 py-2 rounded-lg mr-2"
+              onclick="closeEditForm()"
+            >
+              Batal
+            </button>
+            <button
+              type="submit"
+              class="bg-blue-500 text-white px-4 py-2 rounded-lg"
+            >
+              Simpan
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </main>
-  <div id="edit-form" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white p-8 rounded-lg w-1/3">
-      <h2 class="text-2xl font-bold mb-4 text-black">Edit Komunitas</h2>
-      <form id="edit-community-form">
-        <input type="hidden" id="edit-id" class="hidden" />
-        <div class="mb-4">
-          <label for="edit-nama" class="block text-black font-bold mb-2">Nama Komunitas:</label>
-          <input type="text" id="edit-nama"
-            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" />
-        </div>
-        <div class="mb-4">
-          <label for="edit-deskripsi" class="block font-bold mb-2 text-black">Deskripsi:</label>
-          <textarea id="edit-deskripsi" rows="4"
-            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"></textarea>
-        </div>
-        <div class="mb-4">
-          <label for="edit-jumlah-anggota" class="block text-black font-bold mb-2">Jumlah Anggota:</label>
-          <input type="number" id="edit-jumlah-anggota"
-            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        <div class="mb-4">
-          <label for="edit-batas-anggota" class="block text-black font-bold mb-2">Batas Anggota:</label>
-          <input type="number" id="edit-batas-anggota"
-            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" />
-        </div>
-        <div class="flex justify-end">
-          <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded-lg mr-2" onclick="closeEditForm()">
-            Batal
-          </button>
-          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
-            Simpan
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
 
-  <script>
-    function overview() {
-      window.location.href = "overview.html";
-    }
+    <script>
+      function overview() {
+        window.location.href = "overview.html";
+      }
 
-    function komunitas() {
-      window.location.href = "community.html";
-    }
-    function main() {
-      window.location.href = "matchmaking.html";
-    }
-    function kupon() {
-      window.location.href = "reward.html";
-    }
-    function sewa() {
-      window.location.href = "sewa_lapangan.html";
-    }
-    function profil() {
-      window.location.href = "profile.html";
-    }
-    function tolong() {
-      window.location.href = "help.html";
-    }
-    function keluar() {
-      window.location.href = "login.html";
-    }
-    function AddCommunity() {
-      window.location.href = "add_community.html";
-    }
-  </script>
+      function komunitas() {
+        window.location.href = "community.html";
+      }
+      function main() {
+        window.location.href = "matchmaking.html";
+      }
+      function kupon() {
+        window.location.href = "reward.html";
+      }
+      function sewa() {
+        window.location.href = "sewa_lapangan.html";
+      }
+      function profil() {
+        window.location.href = "profile.html";
+      }
+      function tolong() {
+        window.location.href = "help.html";
+      }
+      function keluar() {
+        window.location.href = "login.html";
+      }
+      function AddCommunity() {
+        window.location.href = "add_community.html";
+      }
+    </script>
 
-  <script src="script/username.js"></script>
-  <script src="script/dataKomunitas.js"></script>
-  <script src="deleteKomunitas.js"></script>
-</body>
-
+    <script src="script/username.js"></script>
+    <script src="script/dataKomunitas.js"></script>
+    <script src="script/logout.js"></script>
+  </body>
 </html>

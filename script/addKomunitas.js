@@ -3,7 +3,7 @@ async function Simpan(event) {
 
   // Tangkap nilai dari elemen input
   const communityName = document.getElementById("community-name").value;
-  const address = document.getElementById("address").value;
+  const address = document.getElementById("deskripsi").value;
   const motivation = document.getElementById("motivation").value;
 
   // Ambil token dari localStorage
