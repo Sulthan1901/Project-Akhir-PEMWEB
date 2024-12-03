@@ -221,7 +221,7 @@ async function fetchAndRenderCommunities() {
     communities.forEach((community) => {
       const communityCard = `
           <div
-            class="bg-[#27223E] rounded-3xl overflow-hidden my-5 mx-5 w-[30%] flex flex-col relative cursor-pointer"
+            class="bg-[#27223E] rounded-3xl overflow-hidden m-3 w-[40%] flex flex-col relative cursor-pointer"
           >
             <div
               class="relative h-52 bg-cover bg-no-repeat"
@@ -240,7 +240,7 @@ async function fetchAndRenderCommunities() {
             <div class="p-4 text-white">
               <p>${community.deskripsi_komunitas}</p>
               <div class="flex justify-between items-center mt-2">
-              <button
+                <button
                   class="bg-[#FFD88D] text-[#0A061E] rounded-full py-1 px-4"
                   id="hapus-button"
                   onclick="deleteCommunity(${community.id})"
